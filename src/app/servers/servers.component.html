@@ -1,7 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-xl-12">
+
+      <label>Server Name</label>
+      <input type="text" class="form-control" [(ngModel)]="serverName">
+
       <h1>servers works!</h1>
+      <hr>
+      <button class="btn btn-primary server-btn"
+              [disabled]="!allowNewServer"
+              (click)="onCreateServer()">Add Server
+      </button>
+      <!--      <app-warning-alert></app-warning-alert>-->
+      <!--      <app-successAler></app-successAler>-->
+      <p>{{newServer}}</p>
       <app-server></app-server>
       <app-server></app-server>
       <app-server></app-server>
